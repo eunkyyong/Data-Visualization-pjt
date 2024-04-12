@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h3>크롤링 기초 - 전체 기간 검색 결과</h3>
+<form action=" {% url "trends:crawling" %}" method="POST">
+  {% csrf_token %}
+  <p>{{ result }}</p>
+  <hr>
+</form>
+{% endblock content %}
